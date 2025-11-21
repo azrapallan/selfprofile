@@ -13,4 +13,3 @@ print("hobbies:", hobbies)
 print("strength:", strength)
 print("weakness:", weakness)
 print("self_profile:", (hobbies, strength, weakness))
-
