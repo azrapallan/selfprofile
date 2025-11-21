@@ -1,18 +1,16 @@
 import sys
 
-if len(sys.argv) > 3:
-    hobbies = sys.argv[1]
-    strength = sys.argv[2]
-    weakness = sys.argv[3]
+args = sys.argv[1:]
+
+if len(args) >= 3:
+    hobbies, strength, weakness = args[:3]
 else:
-    print("No command-line arguments provided — using default profile values.\n")
+    print("Using default profile values — not enough arguments.\n")
     hobbies = "implementing skills"
     strength = "coding skills"
     weakness = "weak in debugging"
 
-self_profile = (hobbies, strength, weakness)
-
 print("hobbies:", hobbies)
 print("strength:", strength)
 print("weakness:", weakness)
-print("self_profile:", self_profile)
+print("self_profile:", (hobbies, strength, weakness))
